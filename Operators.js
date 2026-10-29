@@ -1,0 +1,21 @@
+let marks = 78;
+let attendance = 92;
+let percentage = (marks / 100) * 100;
+let isEligible = attendance >=75 &&  marks <=40;
+let grade = marks >=90 ? "A" : marks >=75 ? "B" : "C";
+console.log("Percentage : ",percentage);
+console.log("Eligible for exam :",isEligible);
+console.log("Grade :",grade);
+// Login Vadlidation
+const Username = "admin";
+const Password = "Pass123";
+const attempts = 2;
+const maxAttempts = 3;
+const inputUser = "admin";
+const inputPass = "Pass123";
+const isValid = inputUser === username && inputPass ===Password;
+const attemptsleft = maxAttempts -attempts;
+const canRetry = attemptsleft > 0 && !isValid;
+console.log("Login sucess :",isValid);
+console.log("Attempts left:", attemptsleft);
+console.log("Can retry:", CanRetry);

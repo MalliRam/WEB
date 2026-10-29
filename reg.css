@@ -1,0 +1,560 @@
+/* 
+   1. UNIVERSAL SELECTOR
+  */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 
+   2. ELEMENT SELECTOR
+    */
+
+/*
+   body is an ELEMENT SELECTOR.
+
+   It selects the <body> element.
+
+   This controls the general appearance of the page.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #333;
+
+    padding: 30px;
+}
+
+
+/*
+   h1 is also an ELEMENT SELECTOR.
+
+   It selects ALL <h1> elements.
+*/
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/*
+   p selects ALL <p> elements.
+
+   This will affect our "Gender" and "Select your skills"
+   paragraphs.
+*/
+
+p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+/* 
+   3. ID SELECTOR
+   */
+
+/*
+   #registrationForm
+
+   # means ID selector.
+
+   It selects the element whose id is:
+
+       registrationForm
+
+   HTML:
+
+       <form id="registrationForm">
+
+   An ID should normally identify one unique element.
+*/
+
+#registrationForm {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    /* border-radius: 10px; */
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 
+   4. CLASS SELECTOR
+    */
+
+/*
+   .form-group
+
+   . means CLASS selector.
+
+   It selects every element having:
+
+       class="form-group"
+
+   We use the same class many times.
+
+   This is why classes are useful for reusable styling.
+*/
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/*  
+   5. DESCENDANT SELECTOR
+  */
+
+/*
+   .form-group label
+
+   This means:
+
+       Find a <label>
+       that is INSIDE .form-group
+
+   Example:
+
+       <div class="form-group">
+           <label>Full Name</label>
+       </div>
+
+   The label will be selected.
+*/
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+
+/* 
+   6. GROUPING SELECTOR
+  */
+
+/*
+   We can select multiple elements at the same time.
+
+   h1, p
+
+   means:
+
+       Select h1
+       AND
+       Select p
+
+   Instead of writing two separate rules.
+*/
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* 
+   7. ELEMENT SELECTOR FOR FORM CONTROLS
+  */
+
+/*
+   This selects ALL input elements.
+
+   It gives all text-like inputs a common appearance.
+*/
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+
+/*
+   textarea is an element selector.
+
+   resize: vertical means the user can make it
+   taller/shorter but not wider.
+*/
+
+textarea {
+    resize: vertical;
+}
+
+
+/* 
+   8. ATTRIBUTE SELECTOR
+   */
+
+/*
+   input[type="email"]
+
+   This is an ATTRIBUTE SELECTOR.
+
+   It means:
+
+       Select <input>
+       whose type attribute is "email".
+
+   HTML:
+
+       <input type="email">
+
+   This allows us to style email inputs differently.
+*/
+
+input[type="email"] {
+    border-left: 4px solid blue;
+}
+
+
+/*
+   Another attribute selector.
+
+   Select only password inputs.
+*/
+
+input[type="password"] {
+    border-left: 4px solid purple;
+}
+
+
+/*
+   Select only number inputs.
+*/
+
+input[type="number"] {
+    border-left: 4px solid orange;
+}
+
+
+/* 
+   9. PSEUDO-CLASS :FOCUS
+  */
+
+/*
+   :focus means:
+
+   "The user is currently using/clicking this element."
+
+   Example:
+
+       Click inside the Full Name input.
+
+   Then the :focus style is applied.
+*/
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: blue;
+
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.2);
+}
+
+
+/* 
+   10. PSEUDO-CLASS :HOVER
+    */
+
+/*
+   button:hover
+
+   :hover means:
+
+       "The mouse pointer is currently over the button."
+
+   When the mouse moves over the button,
+   the background changes.
+*/
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* 
+   11. PSEUDO-CLASS :REQUIRED
+  */
+
+/*
+   :required selects form controls that contain
+   the HTML "required" attribute.
+
+   Example:
+
+       <input required>
+
+   We can visually show students which fields
+   are mandatory.
+*/
+
+input:required,
+select:required,
+textarea:required {
+    border-left: 4px solid red;
+}
+
+
+/* 
+   12. PSEUDO-CLASS :CHECKED
+   */
+
+/*
+   :checked selects a radio button or checkbox
+   when it has been selected.
+
+   Example:
+
+       <input type="checkbox">
+
+   When the user checks it, :checked becomes active.
+*/
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    accent-color: green;
+}
+
+
+/*
+   13. PSEUDO-CLASS :VALID
+    */
+
+/*
+   :valid applies when the entered value satisfies
+   the HTML validation rules.
+
+   Example:
+
+       type="email"
+
+   If the user enters a valid email,
+   the field is considered valid.
+*/
+
+input:valid,
+textarea:valid,
+select:valid {
+    border-color: green;
+}
+
+
+/* 
+   14. PSEUDO-CLASS :INVALID
+   */
+
+/*
+   :invalid applies when the value does NOT satisfy
+   the HTML validation rules.
+
+   Example:
+
+       type="email"
+
+   Enter:
+
+       hello
+
+   instead of:
+
+       hello@gmail.com
+
+   The email input becomes invalid.
+*/
+
+input:invalid,
+textarea:invalid {
+    border-color: red;
+}
+
+
+/* 
+   15. PSEUDO-ELEMENT ::PLACEHOLDER
+    */
+
+/*
+   ::placeholder is a PSEUDO-ELEMENT.
+
+   It selects the placeholder text inside an input.
+
+   Example:
+
+       placeholder="Enter your full name"
+*/
+
+input::placeholder,
+textarea::placeholder {
+    color: gray;
+
+    font-style: italic;
+}
+
+
+/* 
+   16. CHILD SELECTOR
+    */
+
+/*
+   .form-actions > button
+
+   The > symbol means:
+
+       DIRECT CHILD
+
+   We are saying:
+
+       Select buttons that are DIRECTLY inside
+       .form-actions.
+
+   HTML:
+
+       <div class="form-actions">
+           <button>Register</button>
+           <button>Reset</button>
+       </div>
+*/
+
+.form-actions > button {
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    margin-right: 10px;
+}
+
+
+/* 
+   17. ATTRIBUTE SELECTOR + ELEMENT SELECTOR
+    */
+
+/*
+   button[type="submit"]
+
+   Selects a button whose type is "submit".
+*/
+
+button[type="submit"] {
+    background-color: green;
+    color: white;
+}
+
+
+/*
+   button[type="reset"]
+
+   Selects the reset button.
+*/
+
+button[type="reset"] {
+    background-color: gray;
+    color: white;
+}
+
+
+/* 
+   18. CLASS SELECTOR FOR TERMS
+   */
+
+/*
+   .terms selects the div containing the
+   Terms and Conditions checkbox.
+*/
+
+.terms {
+    margin: 20px 0;
+}
+
+
+/*
+   Here we use a descendant selector:
+
+       .terms label
+
+   Select the label inside .terms.
+*/
+
+.terms label {
+    display: inline;
+    font-weight: normal;
+}
+
+
+/* 
+   19. SPECIFICITY EXAMPLE
+   */
+
+/*
+   Let's understand specificity.
+
+   Element selector:
+
+       input
+
+   Class selector:
+
+       .special-input
+
+   ID selector:
+
+       #email
+
+   Specificity strength:
+
+       ID > CLASS > ELEMENT
+*/
+
+
+input {
+    background-color: white;
+}
+
+
+/*
+   Class is more specific than input.
+*/
+
+.form-group input {
+    background-color: #fafafa;
+}
+
+
+/*
+   ID selector is more specific.
+
+   Therefore this rule has higher specificity
+   than the previous rules for the email input.
+*/
+
+#email {
+    background-color: #eef;
+}

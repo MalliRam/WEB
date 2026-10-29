@@ -1,0 +1,229 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Webpage</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            background-color: #e8f0fe;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .profile-header {
+            background-color: white;
+            padding: 25px;
+            border: 1px solid #b0bec5;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px #90a4ae;
+        }
+
+        .profile-photo {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .profile-photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #3f51b5;
+            object-fit: cover;
+        }
+
+        .profile-photo h1 {
+            font-size: 35px;
+            font-weight: bold;
+            color: #1a237e;
+        }
+
+        .profile-photo h2 {
+            font-size: 22px;
+            color: #3f51b5;
+        }
+
+        .section {
+            background-color: white;
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid #b0bec5;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px #90a4ae;
+        }
+
+        .section h2,
+        .about-me h2,
+        .skills- h2,
+        .education h2,
+        .contact h2 {
+            font-size: 28px;
+            color: #3f51b5;
+        }
+
+        .skills ol {
+            padding-left: 20px;
+        }
+
+        .skill {
+            background-color: #dbe4ff;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid #3f51b5;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #1a237e;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background-color: #3f51b5;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #607d8b;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3f51b5;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f1f4ff;
+        }
+
+        .contact p {
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #3949ab;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+            color: #7e57c2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="profile-header">
+
+            <div class="profile-photo">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500"
+                     alt="profile photo">
+
+                <div>
+                    <h1>Ram</h1>
+                    <h2>Computer Science Student</h2>
+                    <p>I am interested in programming and cybersecurity.</p>
+                    <p><q>Securing today, safeguarding tomorrow.</q></p>
+                </div>
+            </div>
+
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p>
+                    I am a computer science student. I like learning
+                    programming and networking.
+                </p>
+
+                <h3>Career Objectives</h3>
+                <p>
+                    My goal is to become a cybersecurity engineer.
+                </p>
+            </div>
+
+            <div class="skills-">
+                <h2>Skills</h2>
+
+                <div class="skills">
+                    <ol>
+                        <li><div class="skill">HTML</div></li>
+                        <li><div class="skill">CSS</div></li>
+                        <li><div class="skill">Networking</div></li>
+                        <li><div class="skill">Python</div></li>
+                        <li><div class="skill">Ethical Hacking</div></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="education">
+                <h2>Education</h2>
+
+                <table>
+                    <tr>
+                        <th>Course</th>
+                        <th>College</th>
+                        <th>Year</th>
+                    </tr>
+
+                    <tr>
+                        <td>B.Tech - Computer Science</td>
+                        <td>Sai University</td>
+                        <td>2025-2029</td>
+                    </tr>
+
+                    <tr>
+                        <td>Intermediate</td>
+                        <td>Ravindra Bharathi Junior College</td>
+                        <td>2025</td>
+                    </tr>
+
+                    <tr>
+                        <td>SSC</td>
+                        <td>Govt High School</td>
+                        <td>2023</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="contact">
+                <h2>Contact Information</h2>
+
+                <p><strong>Email:</strong> Malliram36@gmail.com</p>
+                <p><strong>Phone:</strong> +91 8125455309</p>
+                <p><strong>Location:</strong> Sri Kalahasthi, Andhra Pradesh, India</p>
+
+                <p>
+                    <strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/feed/">
+                        Visit My Profile
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

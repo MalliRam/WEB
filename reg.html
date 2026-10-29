@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+
+    <!-- Connect external CSS file -->
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+
+    <!-- 
+         PAGE HEADING
+         -->
+
+    <h1>Student Registration Form</h1>
+    <!-- 
+         FORM
+          -->
+
+    <form id="registrationForm" action="/register" method="post">
+        <!-- 
+             FULL NAME
+              -->
+
+        <div class="form-group">
+
+            <label for="fullname">
+                Full Name:
+            </label>
+
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter your full name"
+                required
+                minlength="3"
+                maxlength="50"
+            >
+
+        </div>
+
+
+        <!-- 
+             EMAIL
+              -->
+
+        <div class="form-group">
+
+            <label for="email">
+                Email:
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@gmail.com"
+                required
+            >
+
+        </div>
+
+
+        <!-- 
+             PASSWORD
+              -->
+
+        <div class="form-group">
+
+            <label for="password">
+                Password:
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+                minlength="8"
+                maxlength="20"
+            >
+
+        </div>
+
+
+        <!-- 
+             AGE
+              -->
+
+        <div class="form-group">
+
+            <label for="age">
+                Age:
+            </label>
+
+            <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="Enter your age"
+                required
+                min="18"
+                max="60"
+            >
+
+        </div>
+
+
+        <!-- 
+             MOBILE NUMBER
+              -->
+
+        <div class="form-group">
+
+            <label for="mobile">
+                Mobile Number:
+            </label>
+
+            <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="9876543210"
+                required
+                minlength="10"
+                maxlength="10"
+                pattern="[0-9]{10}"
+            >
+
+        </div>
+
+
+        <!-- 
+             DATE OF BIRTH
+              -->
+
+        <div class="form-group">
+
+            <label for="dob">
+                Date of Birth:
+            </label>
+
+            <input
+                type="date"
+                id="dob"
+                name="dob"
+                required
+                min="1960-01-01"
+                max="2008-12-31"
+            >
+
+        </div>
+
+
+        <!-- 
+             GENDER
+              -->
+
+        <div class="form-group">
+
+            <p>Gender:</p>
+
+            <div class="radio-group">
+
+                <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    required
+                >
+
+                <label for="male">Male</label>
+
+
+                <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                >
+
+                <label for="female">Female</label>
+
+
+                <input
+                    type="radio"
+                    id="other"
+                    name="gender"
+                    value="other"
+                >
+
+                <label for="other">Other</label>
+
+            </div>
+
+        </div>
+
+
+        <!-- 
+             COURSE
+              -->
+
+        <div class="form-group">
+
+            <label for="course">
+                Select Course:
+            </label>
+
+            <select
+                id="course"
+                name="course"
+                required
+            >
+
+                <option value="">
+                    -- Select Course --
+                </option>
+
+                <option value="html">
+                    HTML
+                </option>
+
+                <option value="css">
+                    CSS
+                </option>
+
+                <option value="javascript">
+                    JavaScript
+                </option>
+
+                <option value="python">
+                    Python
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- 
+             SKILLS
+             -->
+
+        <div class="form-group">
+
+            <p>Select your skills:</p>
+
+            <div class="checkbox-group">
+
+                <input
+                    type="checkbox"
+                    id="skill-html"
+                    name="skills"
+                    value="html"
+                >
+
+                <label for="skill-html">
+                    HTML
+                </label>
+
+
+                <input
+                    type="checkbox"
+                    id="skill-css"
+                    name="skills"
+                    value="css"
+                >
+
+                <label for="skill-css">
+                    CSS
+                </label>
+
+
+                <input
+                    type="checkbox"
+                    id="skill-python"
+                    name="skills"
+                    value="python"
+                >
+
+                <label for="skill-python">
+                    Python
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- 
+             WEBSITE
+              -->
+
+        <div class="form-group">
+
+            <label for="website">
+                Website:
+            </label>
+
+            <input
+                type="url"
+                id="website"
+                name="website"
+                placeholder="https://example.com"
+            >
+
+        </div>
+
+
+        <!-- 
+             ABOUT YOURSELF
+              -->
+
+        <div class="form-group">
+
+            <label for="about">
+                About Yourself:
+            </label>
+
+            <textarea
+                id="about"
+                name="about"
+                rows="5"
+                cols="40"
+                placeholder="Write something about yourself"
+                minlength="20"
+                maxlength="500"
+                required
+            ></textarea>
+
+        </div>
+
+
+        <!-- 
+             TERMS AND CONDITIONS
+              -->
+
+        <div class="terms">
+
+            <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                value="accepted"
+                required
+            >
+
+            <label for="terms">
+                I agree to the terms and conditions
+            </label>
+
+        </div>
+
+
+        <!-- 
+             BUTTONS
+              -->
+
+        <div class="form-actions">
+
+            <button type="submit">
+                Register
+            </button>
+
+            <button type="reset">
+                Reset
+            </button>
+
+        </div>
+
+
+    </form>
+
+</body>
+</html>

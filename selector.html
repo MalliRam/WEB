@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selectors Demo</title>
+
+    <!-- Connect external CSS file -->
+    <link rel="stylesheet" href="selector.css">
+</head>
+
+<body>
+
+    
+         <!-- 1. UNIVERSAL SELECTOR
+        
+         CSS: 
+         
+         Selects EVERY element on the page. -->
+
+
+    <!-- 
+         2. ELEMENT / TYPE SELECTOR
+         
+         CSS: body, p, h1, etc.
+         
+         Selects all elements of a particular HTML tag.
+    -->
+
+
+    <!-- 
+         3. ID SELECTOR
+         
+         CSS: #header
+         
+         Selects an element with a specific ID.
+    -->
+
+    <header id="header">
+
+        <h1>CSS Selectors Demo</h1>
+
+        <p>
+            This header demonstrates the ID selector.
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- 
+             4. CLASS SELECTOR
+             
+             CSS: .card
+             
+             Selects elements having a particular class.
+        -->
+
+        <section class="card">
+
+            <h2>4. Class Selector</h2>
+
+            <p>
+                This section has the class <strong>card</strong>.
+            </p>
+
+        </section>
+
+
+        <!-- 
+             5. DESCENDANT SELECTOR
+             
+             CSS: .parent h3
+             
+             Selects h3 elements anywhere inside .parent.
+        -->
+
+        <section class="card parent">
+
+            <h2>5. Descendant Selector</h2>
+
+            <h3>Directly inside parent</h3>
+
+            <div>
+
+                <h3>
+                    Deeply nested inside parent
+                </h3>
+
+            </div>
+
+        </section>
+
+
+        <!-- 
+             6. CHILD SELECTOR
+             
+             CSS: .children > p
+             
+             Selects ONLY direct child paragraphs.
+        -->
+
+        <section class="card children">
+
+            <h2>6. Child Selector</h2>
+
+            <p>
+                Direct child paragraph.
+            </p>
+
+            <p>
+                Another direct child paragraph.
+            </p>
+
+            <div>
+
+                <p>
+                    Nested paragraph - NOT a direct child.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 
+             7. GROUP SELECTOR
+             
+             CSS: .group h3, .group p, .group li
+             
+             Applies the same CSS to multiple selectors.
+        -->
+
+        <section class="card group">
+
+            <h2>7. Group Selector</h2>
+
+            <h3>Group Heading</h3>
+
+            <p>
+                Group paragraph.
+            </p>
+
+            <ul>
+
+                <li>Group list item 1</li>
+                <li>Group list item 2</li>
+                <li>Group list item 3</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 
+             8. ATTRIBUTE SELECTOR
+             
+             CSS: input[type]
+             
+             Selects elements that have the specified attribute.
+        -->
+
+        <section class="card">
+
+            <h2>8. Attribute Selector</h2>
+
+            <input type="text" placeholder="Text input">
+
+            <br><br>
+
+            <input type="password" placeholder="Password">
+
+            <br><br>
+
+            <input type="email" placeholder="Email">
+
+        </section>
+
+
+        <!-- 
+             9. ATTRIBUTE EQUALS SELECTOR
+             
+             CSS: input[type="email"]
+             
+             Selects elements whose attribute exactly matches
+             the specified value.
+        -->
+
+        <section class="card">
+
+            <h2>9. Attribute Equals Selector</h2>
+
+            <input type="email" placeholder="Email input">
+
+            <br><br>
+
+            <input type="text" placeholder="Text input">
+
+        </section>
+
+
+        <!-- 
+             10. ATTRIBUTE STARTS WITH
+             
+             CSS: input[name^="user"]
+             
+             ^ means "starts with".
+        -->
+
+        <section class="card">
+
+            <h2>10. Attribute Starts With</h2>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="name starts with user"
+            >
+
+            <br><br>
+
+            <input
+                type="text"
+                name="userId"
+                placeholder="name starts with user"
+            >
+
+            <br><br>
+
+            <input
+                type="text"
+                name="email"
+                placeholder="not selected"
+            >
+
+        </section>
+
+
+        <!-- 
+             11. ATTRIBUTE ENDS WITH
+             
+             CSS: input[name$="number"]
+             
+             $ means "ends with".
+        -->
+
+        <section class="card">
+
+            <h2>11. Attribute Ends With</h2>
+
+            <input
+                type="text"
+                name="phoneNumber"
+                placeholder="ends with number"
+            >
+
+            <br><br>
+
+            <input
+                type="text"
+                name="accountNumber"
+                placeholder="ends with number"
+            >
+
+            <br><br>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="not selected"
+            >
+
+        </section>
+
+
+        <!-- 
+             12. ATTRIBUTE CONTAINS
+            
+             CSS: input[name*="mail"]
+             
+             * means "contains".
+        -->
+
+        <section class="card">
+
+            <h2>12. Attribute Contains</h2>
+
+            <input
+                type="text"
+                name="email"
+                placeholder="contains mail"
+            >
+
+            <br><br>
+
+            <input
+                type="text"
+                name="backupMail"
+                placeholder="contains mail"
+            >
+
+            <br><br>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="not selected"
+            >
+
+        </section>
+
+
+        <!-- 
+             13. MULTIPLE CLASS SELECTOR
+             
+             CSS: .card.special
+             
+             The element must have BOTH classes.
+        -->
+
+        <section class="card special">
+
+            <h2>13. Multiple Class Selector</h2>
+
+            <p>
+                This element has two classes:
+                <strong>card</strong> and
+                <strong>special</strong>.
+            </p>
+
+        </section>
+
+
+        <!-- 
+             14. ELEMENT + CLASS SELECTOR
+             
+             CSS: p.card
+             
+             Selects only a p element having class="card".
+        -->
+
+        <p class="card">
+
+            14. I am a paragraph with class="card".
+
+        </p>
+
+
+        <div class="card">
+
+            <p>
+                This paragraph is inside div.card,
+                but the div itself is not p.card.
+            </p>
+
+        </div>
+
+
+        <!-- 
+             15. ELEMENT + ID SELECTOR
+            
+             CSS: div#demoHeader
+             
+             Selects a DIV having id="demoHeader".
+        -->
+
+        <section class="card">
+
+            <h2>15. Element + ID Selector</h2>
+
+            <div id="demoHeader">
+
+                This is a DIV with id="demoHeader".
+
+            </div>
+
+        </section>
+
+
+        <!-- 
+             16. DESCENDANT COMBINATOR
+             
+             CSS: .descendant p
+             
+             Space means descendant.
+             
+             Selects ANY p inside .descendant.
+        -->
+
+        <section class="card descendant">
+
+            <h2>16. Descendant Combinator</h2>
+
+            <p>
+                Paragraph directly inside descendant.
+            </p>
+
+            <div>
+
+                <p>
+                    Paragraph deeply nested inside descendant.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 
+             17. CHILD COMBINATOR
+             
+             CSS: .children-demo > p
+             
+             > means direct child.
+        -->
+
+        <section class="card children-demo">
+
+            <h2>17. Child Combinator</h2>
+
+            <p>
+                Direct child paragraph.
+            </p>
+
+            <div>
+
+                <p>
+                    Nested paragraph - not selected.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 
+             18. ADJACENT SIBLING SELECTOR
+             
+             CSS: .siblings h3 + p
+             
+             + selects the element immediately after another.
+        -->
+
+        <section class="card siblings">
+
+            <h2>18. Adjacent Sibling Selector</h2>
+
+            <h3>Heading</h3>
+
+            <p>
+                I immediately follow h3.
+            </p>
+
+            <p>
+                I do NOT immediately follow h3.
+            </p>
+
+        </section>
+
+
+        <!-- 
+             19. GENERAL SIBLING SELECTOR
+             
+             CSS: .siblings-general h3 ~ p
+             
+             ~ selects ALL matching siblings after h3.
+        -->
+
+        <section class="card siblings-general">
+
+            <h2>19. General Sibling Selector</h2>
+
+            <h3>Heading</h3>
+
+            <p>
+                Paragraph 1 after heading.
+            </p>
+
+            <p>
+                Paragraph 2 after heading.
+            </p>
+
+            <p>
+                Paragraph 3 after heading.
+            </p>
+
+        </section>
+
+
+        <!-- 
+             20. :hover PSEUDO-CLASS
+             
+             CSS: button:hover
+             
+             Applies when the mouse is over the button.
+        -->
+
+        <section class="card">
+
+            <h2>20. :hover</h2>
+
+            <button>
+                Move Mouse Over Me
+            </button>
+
+        </section>
+
+
+        <!-- 
+             21. :focus PSEUDO-CLASS
+             
+             CSS: input:focus
+             
+             Applies when the input is focused.
+        -->
+
+        <section class="card">
+
+            <h2>21. :focus</h2>
+
+            <input
+                type="text"
+                placeholder="Click inside this input"
+            >
+
+        </section>
+
+
+        <!-- 
+             22. :first-child
+             
+             CSS: .pseudo li:first-child
+             
+             Selects the first child.
+        -->
+
+        <section class="card pseudo">
+
+            <h2>22. :first-child</h2>
+
+            <ul>
+
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 
+             23. :last-child
+             
+             CSS: .pseudo li:last-child
+             
+             Selects the last child.
+        -->
+
+        <section class="card pseudo">
+
+            <h2>23. :last-child</h2>
+
+            <ul>
+
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Last item</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 
+             24. :nth-child()
+             
+             CSS: .pseudo li:nth-child(2)
+             
+             Selects the second child.
+        -->
+
+        <section class="card pseudo">
+
+            <h2>24. :nth-child(2)</h2>
+
+            <ul>
+
+                <li>Item 1</li>
+                <li>Item 2 - selected</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 
+             25. :nth-child(even)
+             
+             CSS: .pseudo li:nth-child(even)
+             
+             Selects 2nd, 4th, 6th, etc.
+        -->
+
+        <section class="card pseudo">
+
+            <h2>25. :nth-child(even)</h2>
+
+            <ul>
+
+                <li>Item 1</li>
+                <li>Item 2 - even</li>
+                <li>Item 3</li>
+                <li>Item 4 - even</li>
+                <li>Item 5</li>
+                <li>Item 6 - even</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 
+             26. :nth-child(odd)
+             
+             CSS: .pseudo li:nth-child(odd)
+             
+             Selects 1st, 3rd, 5th, etc.
+        -->
+
+        <section class="card pseudo">
+
+            <h2>26. :nth-child(odd)</h2>
+
+            <ul>
+
+                <li>Item 1 - odd</li>
+                <li>Item 2</li>
+                <li>Item 3 - odd</li>
+                <li>Item 4</li>
+                <li>Item 5 - odd</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 
+             27. ::before PSEUDO-ELEMENT
+             
+             CSS: .pseudo-element p::before
+             
+             Adds content BEFORE an element.
+        -->
+
+        <section class="card pseudo-element">
+
+            <h2>27. ::before</h2>
+
+            <p>
+                This paragraph has content before it.
+            </p>
+
+        </section>
+
+
+        <!-- 
+             28. ::after PSEUDO-ELEMENT
+             
+             CSS: .pseudo-element p::after
+             
+             Adds content AFTER an element.
+        -->
+
+        <section class="card pseudo-element">
+
+            <h2>28. ::after</h2>
+
+            <p>
+                This paragraph has content after it.
+            </p>
+
+        </section>
+
+
+        <!-- 
+             29. ::first-letter
+             
+             CSS: .pseudo-element p::first-letter
+             
+             Changes the first letter.
+        -->
+
+        <section class="card pseudo-element">
+
+            <h2>29. ::first-letter</h2>
+
+            <p>
+                This paragraph demonstrates the first-letter
+                pseudo-element.
+            </p>
+
+        </section>
+
+
+        <!-- 
+             30. ::first-line
+             
+             CSS: .pseudo-element p::first-line
+             
+             Changes the first line.
+        -->
+
+        <section class="card pseudo-element">
+
+            <h2>30. ::first-line</h2>
+
+            <p>
+                This is a longer paragraph used to demonstrate
+                the first-line pseudo-element. Resize the
+                browser window to see which part is affected.
+            </p>
+
+        </section>
+
+
+        <!-- 
+             31. COMBINED SELECTOR
+             
+             CSS: div.card p
+             
+             Selects p elements inside div.card.
+        -->
+
+        <div class="card">
+
+            <h2>31. Combined Selector</h2>
+
+            <p>
+                This paragraph is inside div.card.
+            </p>
+
+        </div>
+
+
+        <!-- 
+             32. UNIVERSAL SELECTOR INSIDE ELEMENT
+             
+             CSS: .container *
+             
+             Selects EVERY element inside .container.
+        -->
+
+        <section class="card">
+
+            <h2>32. Universal Inside Element</h2>
+
+            <p>
+                This paragraph is inside .container.
+            </p>
+
+            <div>
+
+                <p>
+                    This paragraph is also inside .container.
+                </p>
+
+                <span>
+                    This span is also selected.
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- 
+             FINAL PRACTICE
+             
+        -->
+
+        <section class="card special parent pseudo-element">
+
+            <h2>Final Practice</h2>
+
+            <p>
+                This section has multiple classes.
+            </p>
+
+            <h3>Practice Heading</h3>
+
+            <p>
+                Try to identify which selectors affect me.
+            </p>
+
+            <ul>
+
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+
+            </ul>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- 
+         FOOTER
+          -->
+
+    <footer>
+
+        <h2>CSS Selector Demo</h2>
+
+        <p>
+            Practice CSS selectors by inspecting this page.
+        </p>
+
+    </footer>
+
+</body>
+</html

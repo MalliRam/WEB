@@ -1,0 +1,27 @@
+.b1 {
+    color: red;
+    background-color: white;
+    border-width: 5px;
+    border-style: dotted;
+    margin-right: 6px;
+    padding-left: 16px;
+    
+}
+.b1:hover {
+    cursor: pointer;
+}
+.b2 {
+        color: red;
+    background-color: white;
+    border-width: 5px;
+    border-style: dotted;
+}
+.p {
+    font-family: Arial;
+}
+.cat {
+    width: 50px;
+    height: 50px;
+    object-position: center;
+    border-radius: 25px;
+}

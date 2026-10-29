@@ -1,0 +1,572 @@
+
+/* 
+   1. UNIVERSAL SELECTOR
+
+   Syntax:
+   *
+
+   Selects EVERY element on the page.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* 
+   2. ELEMENT / TYPE SELECTOR
+   
+
+   Syntax:
+   p
+   h1
+   body
+   div
+
+   Selects all elements of that HTML type.
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/* 
+   3. ID SELECTOR
+   
+   Syntax:
+   #id
+
+   Selects an element with a particular ID.
+
+   HTML:
+   <header id="header">
+
+   CSS:
+   #header
+*/
+
+#header {
+    background: red;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#header h1 {
+    margin: 0;
+    color: rgb(183, 21, 94);
+}
+
+
+/* 
+   4. CLASS SELECTOR
+   
+
+   Syntax:
+   .class
+
+   HTML:
+   <div class="card">
+
+   CSS:
+   .card
+*/
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/* 
+   5. DESCENDANT SELECTOR
+
+   Syntax:
+   parent child
+
+   Selects child elements anywhere inside the parent.
+
+   Example:
+   .parent h3
+*/
+
+.parent h3,hr,p {
+    color: green;
+}
+
+
+/* 
+   6. CHILD SELECTOR
+   
+
+   Syntax:
+   parent > child
+
+   Selects ONLY direct children.
+
+   Example:
+   .children > p
+*/
+
+.children > p {
+    color: #008000;
+    font-weight: bold;
+    background: #e8f5e9;
+    padding: 10px;
+}
+
+
+/* 
+   7. GROUP SELECTOR
+   
+
+   Syntax:
+   selector1, selector2, selector3
+
+   Applies the same CSS to multiple selectors.
+*/
+
+.group h3,
+.group p,
+.group li {
+    color: #6a35d4;
+}
+
+
+/* 
+   8. ATTRIBUTE SELECTOR
+   
+
+   Syntax:
+   [attribute]
+
+   Selects elements that HAVE the attribute.
+
+   Example:
+   input[type]
+*/
+
+input[type] {
+    border: 2px solid #ccc;
+    padding: 8px;
+}
+
+
+/* 
+   9. ATTRIBUTE EQUALS SELECTOR
+   
+
+   Syntax:
+   [attribute="value"]
+
+   Selects elements whose attribute exactly matches
+   the specified value.
+*/
+
+input[type="email"] {
+    border-color: #2196f3;
+}
+
+
+/* 
+   10. ATTRIBUTE STARTS WITH
+   
+
+   Syntax:
+   [attribute^="value"]
+
+   ^ means STARTS WITH.
+*/
+
+input[name^="user"] {
+    background: #fff7d6;
+    border-radius: 5px;
+}
+
+
+/* 
+   11. ATTRIBUTE ENDS WITH
+   
+
+   Syntax:
+   [attribute$="value"]
+
+   $ means ENDS WITH.
+*/
+
+input[name$="number"] {
+    background: #e8f5e9;
+    border-radius: 5px;
+}
+
+
+/* 
+   12. ATTRIBUTE CONTAINS
+   
+
+   Syntax:
+   [attribute*="value"]
+
+   * means CONTAINS.
+*/
+
+input[name*="mail"] {
+    background: #e3f2fd;
+    font-style: italic;
+}
+
+
+/* 
+   13. MULTIPLE CLASS SELECTOR
+   
+
+   Syntax:
+   .class1.class2
+
+   The SAME element must have BOTH classes.
+
+   HTML:
+   <section class="card special">
+*/
+
+.card.special {
+    border: 3px solid #3158e8;
+}
+
+
+/* 
+   14. ELEMENT + CLASS SELECTOR
+   
+
+   Syntax:
+   element.class
+
+   Example:
+   p.card
+
+   Means:
+   Select ONLY p elements with class="card".
+*/
+
+p.card {
+    font-weight: bold;
+}
+
+
+/* 
+   15. ELEMENT + ID SELECTOR
+  
+
+   Syntax:
+   element#id
+
+   Example:
+   div#demoHeader
+
+   Means:
+   Select a DIV having id="demoHeader".
+*/
+
+div#demoHeader {
+    border: 3px dashed orange;
+    padding: 15px;
+}
+
+
+/* 
+   16. DESCENDANT COMBINATOR
+   
+
+   Syntax:
+   .descendant p
+
+   A SPACE means descendant.
+
+   Selects ANY p inside .descendant.
+*/
+
+.descendant p {
+    padding-left: 10px;
+}
+
+
+/* 
+   17. CHILD COMBINATOR
+   
+
+   Syntax:
+   .children-demo > p
+
+   > means direct child.
+*/
+
+.children-demo > p {
+    background: #dff5df;
+    padding: 10px;
+}
+
+
+/* 
+   18. ADJACENT SIBLING SELECTOR
+   
+
+   Syntax:
+   A + B
+
+   Selects B when B comes IMMEDIATELY after A.
+
+   Example:
+   h3 + p
+*/
+
+.siblings h3 + p {
+    color: #ff5722;
+    font-weight: bold;
+}
+
+
+/* 
+   19. GENERAL SIBLING SELECTOR
+   
+
+   Syntax:
+   A ~ B
+
+   Selects ALL B elements that come after A
+   and share the same parent.
+*/
+
+.siblings-general h3 ~ p {
+    text-decoration: underline;
+}
+
+
+/* 
+   20. :hover PSEUDO-CLASS
+   
+
+   Applies when the mouse is over the element.
+*/
+
+button:hover {
+    background: #3158e8;
+    color: white;
+}
+
+
+/* 
+   21. :focus PSEUDO-CLASS
+   
+
+   Applies when an input is focused.
+*/
+
+input:focus {
+    outline: 3px solid #90caf9;
+}
+
+
+/* 
+   22. :first-child
+   
+
+   Selects an element if it is the FIRST child.
+*/
+
+.pseudo li:first-child {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* 
+   23. :last-child
+   
+
+   Selects an element if it is the LAST child.
+*/
+
+.pseudo li:last-child {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* 
+   24. :nth-child()
+   
+
+   Syntax:
+   :nth-child(number)
+
+   Example:
+   :nth-child(2)
+
+   Selects the second child.
+*/
+
+.pseudo li:nth-child(2) {
+    background: #fff3cd;
+}
+
+
+/* 
+   25. :nth-child(even)
+   
+
+   Selects:
+   2, 4, 6, 8, ...
+
+*/
+
+.pseudo li:nth-child(even) {
+    padding: 5px;
+}
+
+
+/* 
+   26. :nth-child(odd)
+   
+
+   Selects:
+   1, 3, 5, 7, ...
+
+*/
+
+.pseudo li:nth-child(odd) {
+    margin-left: 10px;
+}
+
+
+/* 
+   27. ::before PSEUDO-ELEMENT
+  
+
+   Creates content BEFORE the element.
+*/
+
+.pseudo-element p::before {
+    content: "👉 ";
+}
+
+
+/* 
+   28. ::after PSEUDO-ELEMENT
+   
+
+   Creates content AFTER the element.
+*/
+
+.pseudo-element p::after {
+    content: " ✔";
+}
+
+
+/* 
+   29. ::first-letter
+  
+
+   Changes the first letter.
+*/
+
+.pseudo-element p::first-letter {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* 
+   30. ::first-line
+   
+
+   Changes the first line.
+*/
+
+.pseudo-element p::first-line {
+    font-weight: bold;
+}
+
+
+/*
+   31. COMBINED SELECTOR
+   
+
+   Syntax:
+   div.card p
+
+   Means:
+   Select p elements inside div.card.
+*/
+
+div.card p {
+    color: #555;
+}
+
+
+/* 
+   32. UNIVERSAL INSIDE AN ELEMENT
+   
+
+   Syntax:
+   .container *
+
+   Selects EVERY element inside .container.
+*/
+
+.container * {
+    border-left: 1px solid #2196f3;
+}
+
+
+/* 
+   FOOTER
+  
+*/
+
+footer {
+    background: #222;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* 
+   EXTRA BASIC STYLING
+   
+   These are NOT selector demonstrations.
+   They simply make the demo easier to read.
+*/
+
+h2 {
+    margin-top: 0;
+}
+
+input {
+    min-width: 250px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
